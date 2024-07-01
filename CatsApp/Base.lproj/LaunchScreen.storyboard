@@ -15,26 +15,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CatLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3iB-rL-J2a">
-                                <rect key="frame" x="25" y="64" width="343" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wHn-iX-3Dj">
+                                <rect key="frame" x="25" y="176" width="343" height="500"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CatLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3iB-rL-J2a">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="94.666666666666671"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CatImage" translatesAutoresizingMaskIntoConstraints="NO" id="N8S-wa-VE4">
+                                        <rect key="frame" x="0.0" y="99.666666666666714" width="343" height="400.33333333333326"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="0H8-LQ-9M2"/>
+                                    <constraint firstAttribute="height" constant="500" id="ae7-8y-Tjo"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CatImage" translatesAutoresizingMaskIntoConstraints="NO" id="N8S-wa-VE4">
-                                <rect key="frame" x="25" y="149" width="343" height="643"/>
-                            </imageView>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96220391989999998" green="0.2985672653" blue="0.29807457329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3iB-rL-J2a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="0Dn-9u-86v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N8S-wa-VE4" secondAttribute="bottom" constant="26" id="3lb-Ty-bgu"/>
-                            <constraint firstItem="N8S-wa-VE4" firstAttribute="top" secondItem="3iB-rL-J2a" secondAttribute="bottom" constant="15" id="8gZ-lq-0xV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3iB-rL-J2a" secondAttribute="trailing" constant="25" id="HEp-Ly-SDX"/>
-                            <constraint firstItem="3iB-rL-J2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="mcU-s1-Dwx"/>
-                            <constraint firstItem="N8S-wa-VE4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="wpt-Jc-bxC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N8S-wa-VE4" secondAttribute="trailing" constant="25" id="x5Z-2k-8fh"/>
+                            <constraint firstAttribute="trailing" secondItem="wHn-iX-3Dj" secondAttribute="trailing" constant="25" id="InZ-FF-7K1"/>
+                            <constraint firstItem="wHn-iX-3Dj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cLU-Bx-Adz"/>
+                            <constraint firstItem="wHn-iX-3Dj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lfp-dX-nsa"/>
+                            <constraint firstItem="wHn-iX-3Dj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="25" id="via-Cr-riD"/>
                         </constraints>
                     </view>
                 </viewController>
