@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../CatsFrameWork/Service/Components/Components.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../CatsFrameWork/Service/Networking/Networking/Networking.xcodeproj">
    </FileRef>
    <FileRef
