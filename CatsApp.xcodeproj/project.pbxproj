@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C1550082C34BD3C00089F17 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1550072C34BD3C00089F17 /* Networking.framework */; };
 		8C1550092C34BD3C00089F17 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1550072C34BD3C00089F17 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C2570072C36042C00DDF578 /* CatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2570062C36042C00DDF578 /* CatsModel.swift */; };
 		8C5896BE2C33388C00D9BA79 /* CatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5896BD2C33388C00D9BA79 /* CatListViewController.swift */; };
 		8CF61FC42C3311B200E7AB70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF61FC32C3311B200E7AB70 /* AppDelegate.swift */; };
 		8CF61FC62C3311B200E7AB70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF61FC52C3311B200E7AB70 /* SceneDelegate.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		8C154FE12C34B8E300089F17 /* networkingCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = networkingCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1550072C34BD3C00089F17 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2570062C36042C00DDF578 /* CatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsModel.swift; sourceTree = "<group>"; };
 		8C5896BD2C33388C00D9BA79 /* CatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewController.swift; sourceTree = "<group>"; };
 		8CF61FC02C3311B200E7AB70 /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF61FC32C3311B200E7AB70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,9 +106,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C2570052C36041F00DDF578 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C2570062C36042C00DDF578 /* CatsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8CF61FB72C3311B200E7AB70 = {
 			isa = PBXGroup;
 			children = (
+				8C2570052C36041F00DDF578 /* Model */,
 				8CF61FC22C3311B200E7AB70 /* CatsApp */,
 				8CF61FD92C3311B600E7AB70 /* CatsAppTests */,
 				8CF61FE32C3311B600E7AB70 /* CatsAppUITests */,
@@ -290,6 +301,7 @@
 			files = (
 				8C5896BE2C33388C00D9BA79 /* CatListViewController.swift in Sources */,
 				8CF61FC42C3311B200E7AB70 /* AppDelegate.swift in Sources */,
+				8C2570072C36042C00DDF578 /* CatsModel.swift in Sources */,
 				8CF61FC62C3311B200E7AB70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
