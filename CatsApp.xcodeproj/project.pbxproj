@@ -8,15 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		8C10531E2C36F50D00735E88 /* CatsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10531D2C36F50D00735E88 /* CatsListViewModel.swift */; };
-		8C1053462C37070B00735E88 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1053452C37070B00735E88 /* Components.framework */; };
-		8C1053472C37070B00735E88 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1053452C37070B00735E88 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C1550082C34BD3C00089F17 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1550072C34BD3C00089F17 /* Networking.framework */; };
-		8C1550092C34BD3C00089F17 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1550072C34BD3C00089F17 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C2570072C36042C00DDF578 /* CatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2570062C36042C00DDF578 /* CatsModel.swift */; };
 		8C25700D2C36276C00DDF578 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25700C2C36276C00DDF578 /* EndPoint.swift */; };
 		8C31B8CA2C3791040058017D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C31B8C92C3791040058017D /* DetailViewController.swift */; };
 		8C5896BE2C33388C00D9BA79 /* CatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5896BD2C33388C00D9BA79 /* CatListViewController.swift */; };
 		8CCF82A02C383A8800EDBA72 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF829F2C383A8800EDBA72 /* DetailViewModel.swift */; };
+		8CCF82AE2C384E9300EDBA72 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8CCF82AD2C384E9300EDBA72 /* SDWebImage */; };
+		8CCF82B02C384E9300EDBA72 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CCF82AF2C384E9300EDBA72 /* SDWebImageMapKit */; };
+		8CCF82B22C38526000EDBA72 /* Networking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCF82B12C38526000EDBA72 /* Networking.xcframework */; };
+		8CCF82B32C38526000EDBA72 /* Networking.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCF82B12C38526000EDBA72 /* Networking.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CCF831A2C3854F600EDBA72 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF830A2C3854F600EDBA72 /* Extension.swift */; };
+		8CCF831B2C3854F600EDBA72 /* KittiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF830C2C3854F600EDBA72 /* KittiesCell.swift */; };
+		8CCF831C2C3854F600EDBA72 /* KittiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF830D2C3854F600EDBA72 /* KittiesCell.xib */; };
+		8CCF831D2C3854F600EDBA72 /* CatsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF830F2C3854F600EDBA72 /* CatsCollection.swift */; };
+		8CCF831E2C3854F600EDBA72 /* ImagePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF83112C3854F600EDBA72 /* ImagePath.swift */; };
+		8CCF831F2C3854F600EDBA72 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF83132C3854F600EDBA72 /* TagCell.swift */; };
+		8CCF83202C3854F600EDBA72 /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF83142C3854F600EDBA72 /* TagCell.xib */; };
+		8CCF83212C3854F600EDBA72 /* CollectionTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF83162C3854F600EDBA72 /* CollectionTagsView.swift */; };
+		8CCF83222C3854F600EDBA72 /* CatCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF83182C3854F600EDBA72 /* CatCellModel.swift */; };
 		8CF61FC42C3311B200E7AB70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF61FC32C3311B200E7AB70 /* AppDelegate.swift */; };
 		8CF61FC62C3311B200E7AB70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF61FC52C3311B200E7AB70 /* SceneDelegate.swift */; };
 		8CF61FCB2C3311B200E7AB70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8CF61FCA2C3311B200E7AB70 /* Base */; };
@@ -51,8 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C1053472C37070B00735E88 /* Components.framework in Embed Frameworks */,
-				8C1550092C34BD3C00089F17 /* Networking.framework in Embed Frameworks */,
+				8CCF82B32C38526000EDBA72 /* Networking.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,15 +69,22 @@
 
 /* Begin PBXFileReference section */
 		8C10531D2C36F50D00735E88 /* CatsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListViewModel.swift; sourceTree = "<group>"; };
-		8C1053452C37070B00735E88 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C154FE12C34B8E300089F17 /* networkingCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = networkingCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C1550072C34BD3C00089F17 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2570062C36042C00DDF578 /* CatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsModel.swift; sourceTree = "<group>"; };
 		8C25700C2C36276C00DDF578 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		8C31B8C92C3791040058017D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8C5896BD2C33388C00D9BA79 /* CatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewController.swift; sourceTree = "<group>"; };
 		8CCF829F2C383A8800EDBA72 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		8CCF82A32C3841C900EDBA72 /* SDWebImage.xcframework */ = {isa = PBXFileReference; expectedSignature = "SelfSigned:FC3B101386344C50DB702A9AD1016FB51A3ECC8B9DA9B7AE47A048D4D0633983"; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = ../../../Downloads/SDWebImage.xcframework; sourceTree = "<group>"; };
+		8CCF82B12C38526000EDBA72 /* Networking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Networking.xcframework; path = ../../../Desktop/FRAMEWORKS/Networking.xcframework; sourceTree = "<group>"; };
+		8CCF830A2C3854F600EDBA72 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8CCF830C2C3854F600EDBA72 /* KittiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KittiesCell.swift; sourceTree = "<group>"; };
+		8CCF830D2C3854F600EDBA72 /* KittiesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KittiesCell.xib; sourceTree = "<group>"; };
+		8CCF830F2C3854F600EDBA72 /* CatsCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsCollection.swift; sourceTree = "<group>"; };
+		8CCF83112C3854F600EDBA72 /* ImagePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePath.swift; sourceTree = "<group>"; };
+		8CCF83132C3854F600EDBA72 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		8CCF83142C3854F600EDBA72 /* TagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
+		8CCF83162C3854F600EDBA72 /* CollectionTagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTagsView.swift; sourceTree = "<group>"; };
+		8CCF83182C3854F600EDBA72 /* CatCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatCellModel.swift; sourceTree = "<group>"; };
 		8CF61FC02C3311B200E7AB70 /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF61FC32C3311B200E7AB70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF61FC52C3311B200E7AB70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +104,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C1053462C37070B00735E88 /* Components.framework in Frameworks */,
-				8C1550082C34BD3C00089F17 /* Networking.framework in Frameworks */,
+				8CCF82AE2C384E9300EDBA72 /* SDWebImage in Frameworks */,
+				8CCF82B22C38526000EDBA72 /* Networking.xcframework in Frameworks */,
+				8CCF82B02C384E9300EDBA72 /* SDWebImageMapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,10 +155,8 @@
 		8C154FE02C34B8E300089F17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CCF82B12C38526000EDBA72 /* Networking.xcframework */,
 				8CCF82A32C3841C900EDBA72 /* SDWebImage.xcframework */,
-				8C1053452C37070B00735E88 /* Components.framework */,
-				8C1550072C34BD3C00089F17 /* Networking.framework */,
-				8C154FE12C34B8E300089F17 /* networkingCat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +172,7 @@
 		8C25700B2C36274B00DDF578 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8CCF830A2C3854F600EDBA72 /* Extension.swift */,
 				8C25700C2C36276C00DDF578 /* EndPoint.swift */,
 			);
 			path = Utils;
@@ -188,9 +203,73 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8CCF83092C3854C300EDBA72 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF83102C3854F600EDBA72 /* CollectionCatsView */,
+				8CCF83172C3854F600EDBA72 /* CollectionTagsView */,
+				8CCF83122C3854F600EDBA72 /* Helper */,
+				8CCF83192C3854F600EDBA72 /* Model */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8CCF830E2C3854F600EDBA72 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF830C2C3854F600EDBA72 /* KittiesCell.swift */,
+				8CCF830D2C3854F600EDBA72 /* KittiesCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		8CCF83102C3854F600EDBA72 /* CollectionCatsView */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF830E2C3854F600EDBA72 /* CustomCell */,
+				8CCF830F2C3854F600EDBA72 /* CatsCollection.swift */,
+			);
+			path = CollectionCatsView;
+			sourceTree = "<group>";
+		};
+		8CCF83122C3854F600EDBA72 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF83112C3854F600EDBA72 /* ImagePath.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8CCF83152C3854F600EDBA72 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF83132C3854F600EDBA72 /* TagCell.swift */,
+				8CCF83142C3854F600EDBA72 /* TagCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8CCF83172C3854F600EDBA72 /* CollectionTagsView */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF83152C3854F600EDBA72 /* Cell */,
+				8CCF83162C3854F600EDBA72 /* CollectionTagsView.swift */,
+			);
+			path = CollectionTagsView;
+			sourceTree = "<group>";
+		};
+		8CCF83192C3854F600EDBA72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF83182C3854F600EDBA72 /* CatCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8CF61FB72C3311B200E7AB70 = {
 			isa = PBXGroup;
 			children = (
+				8CCF83092C3854C300EDBA72 /* Component */,
 				8C25700B2C36274B00DDF578 /* Utils */,
 				8C2570052C36041F00DDF578 /* Model */,
 				8CF61FC22C3311B200E7AB70 /* CatsApp */,
@@ -260,6 +339,10 @@
 			dependencies = (
 			);
 			name = CatsApp;
+			packageProductDependencies = (
+				8CCF82AD2C384E9300EDBA72 /* SDWebImage */,
+				8CCF82AF2C384E9300EDBA72 /* SDWebImageMapKit */,
+			);
 			productName = CatsApp;
 			productReference = 8CF61FC02C3311B200E7AB70 /* CatsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -332,6 +415,9 @@
 				Base,
 			);
 			mainGroup = 8CF61FB72C3311B200E7AB70;
+			packageReferences = (
+				8CCF82AC2C384E9300EDBA72 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 8CF61FC12C3311B200E7AB70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,6 +435,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF61FCD2C3311B600E7AB70 /* Assets.xcassets in Resources */,
+				8CCF83202C3854F600EDBA72 /* TagCell.xib in Resources */,
+				8CCF831C2C3854F600EDBA72 /* KittiesCell.xib in Resources */,
 				8CF61FD02C3311B600E7AB70 /* Base in Resources */,
 				8CF61FCB2C3311B200E7AB70 /* Base in Resources */,
 			);
@@ -375,10 +463,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCF831A2C3854F600EDBA72 /* Extension.swift in Sources */,
 				8C5896BE2C33388C00D9BA79 /* CatListViewController.swift in Sources */,
 				8CF61FC42C3311B200E7AB70 /* AppDelegate.swift in Sources */,
 				8C25700D2C36276C00DDF578 /* EndPoint.swift in Sources */,
 				8C10531E2C36F50D00735E88 /* CatsListViewModel.swift in Sources */,
+				8CCF83212C3854F600EDBA72 /* CollectionTagsView.swift in Sources */,
+				8CCF831B2C3854F600EDBA72 /* KittiesCell.swift in Sources */,
+				8CCF831E2C3854F600EDBA72 /* ImagePath.swift in Sources */,
+				8CCF831D2C3854F600EDBA72 /* CatsCollection.swift in Sources */,
+				8CCF831F2C3854F600EDBA72 /* TagCell.swift in Sources */,
+				8CCF83222C3854F600EDBA72 /* CatCellModel.swift in Sources */,
 				8C2570072C36042C00DDF578 /* CatsModel.swift in Sources */,
 				8CF61FC62C3311B200E7AB70 /* SceneDelegate.swift in Sources */,
 				8C31B8CA2C3791040058017D /* DetailViewController.swift in Sources */,
@@ -723,6 +818,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CCF82AC2C384E9300EDBA72 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CCF82AD2C384E9300EDBA72 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CCF82AC2C384E9300EDBA72 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		8CCF82AF2C384E9300EDBA72 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CCF82AC2C384E9300EDBA72 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CF61FB82C3311B200E7AB70 /* Project object */;
 }
