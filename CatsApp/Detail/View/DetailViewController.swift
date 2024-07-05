@@ -19,7 +19,7 @@ final class DetailViewController: UIViewController {
   }
   @IBOutlet weak var collectionVIew: CollectionTagsView!
   
-  var detailData: CatCellModel?
+  var viewModel: DetailViewModel?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,9 +27,9 @@ final class DetailViewController: UIViewController {
   }
   
   private func loadData() {
-    if let data = detailData {
-      catImage.loadImage(image: data.image, id: data.image)
-      collectionVIew.sourceList = data.tag
+    if let data = viewModel {
+      catImage.loadImage(image: data.imagePath, id: data.imagePath)
+      collectionVIew.sourceList = data.tagCat
     }
   }
 }
