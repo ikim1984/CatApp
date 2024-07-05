@@ -6,15 +6,27 @@
 //
 
 import UIKit
+import Networking
 
 final class CatListViewController: UIViewController {
   //MARK:- Outlets
   @IBOutlet weak var catsCollectionView: CatsCollection!
  //MARK:- Variables
-  private let viewModel = CatsListViewModel()
+  let viewModel: ViewModelProtocol
   
-  private let limit = 50
-  private var skip = 0
+  let limit = 50
+  var skip = 0
+  
+  init(viewModel: ViewModelProtocol) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    let service = ApiService()
+    viewModel = CatsListViewModel(apiService: service)
+    super.init(coder: coder)
+  }
   
   //MARK:- Livecycle
   override func viewDidLoad() {

@@ -57,6 +57,123 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ApiProtocol",
+        "printedName": "ApiProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "service",
+            "printedName": "service(method:model:endPoint:parameters:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_1_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<τ_1_0, any Swift.Error>?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Result<τ_1_0, any Swift.Error>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<τ_1_0, any Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_1_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Networking11ApiProtocolP7service6method5model8endPoint10parameters10completionySS_qd__mSSSDySSypGys6ResultOyqd__s5Error_pGSgctSeRd__lF",
+            "mangledName": "$s10Networking11ApiProtocolP7service6method5model8endPoint10parameters10completionySS_qd__mSSSDySSypGys6ResultOyqd__s5Error_pGSgctSeRd__lF",
+            "moduleName": "Networking",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Networking.ApiProtocol, τ_1_0 : Swift.Decodable>",
+            "sugared_genericSig": "<Self, T where Self : Networking.ApiProtocol, T : Swift.Decodable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:10Networking11ApiProtocolP",
+        "mangledName": "$s10Networking11ApiProtocolP",
+        "moduleName": "Networking",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ApiService",
         "printedName": "ApiService",
         "children": [
@@ -132,7 +249,6 @@
                     "printedName": "Any"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:SD"
               },
               {
@@ -243,6 +359,15 @@
         "moduleName": "Networking",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ApiProtocol",
+            "printedName": "ApiProtocol",
+            "usr": "s:10Networking11ApiProtocolP",
+            "mangledName": "$s10Networking11ApiProtocolP"
+          }
         ]
       },
       {
@@ -509,13 +634,6 @@
       "offset": 207,
       "length": 25,
       "value": "\"https:\/\/cataas.com\/cat\/\""
-    },
-    {
-      "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Service\/Service.swift",
-      "kind": "Dictionary",
-      "offset": 540,
-      "length": 3,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Utils\/enums.swift",

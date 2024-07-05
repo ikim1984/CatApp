@@ -18,7 +18,18 @@ final class DetailViewController: UIViewController {
   }
   @IBOutlet weak var collectionVIew: CollectionTagsView!
   
-  var viewModel: DetailViewModel?
+  var viewModel: DetailViewModel
+  
+  init(viewModel: DetailViewModel) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    let model = CatCellModel(image: "", tag: [])
+    viewModel = DetailViewModel(detailCat: model)
+    super.init(coder: coder)
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,9 +37,7 @@ final class DetailViewController: UIViewController {
   }
   
   private func loadData() {
-    if let data = viewModel {
-      catImage.downloadImage(path: data.imagePath)
-      collectionVIew.sourceList = data.tagCat
-    }
+    catImage.downloadImage(path: viewModel.imagePath)
+    collectionVIew.sourceList = viewModel.tagCat
   }
 }
