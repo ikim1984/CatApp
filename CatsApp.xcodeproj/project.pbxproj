@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -69,6 +69,7 @@
 		8C31B8C92C3791040058017D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8C5896BD2C33388C00D9BA79 /* CatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewController.swift; sourceTree = "<group>"; };
 		8CCF829F2C383A8800EDBA72 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		8CCF82A32C3841C900EDBA72 /* SDWebImage.xcframework */ = {isa = PBXFileReference; expectedSignature = "SelfSigned:FC3B101386344C50DB702A9AD1016FB51A3ECC8B9DA9B7AE47A048D4D0633983"; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = ../../../Downloads/SDWebImage.xcframework; sourceTree = "<group>"; };
 		8CF61FC02C3311B200E7AB70 /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF61FC32C3311B200E7AB70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF61FC52C3311B200E7AB70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		8C154FE02C34B8E300089F17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CCF82A32C3841C900EDBA72 /* SDWebImage.xcframework */,
 				8C1053452C37070B00735E88 /* Components.framework */,
 				8C1550072C34BD3C00089F17 /* Networking.framework */,
 				8C154FE12C34B8E300089F17 /* networkingCat.framework */,

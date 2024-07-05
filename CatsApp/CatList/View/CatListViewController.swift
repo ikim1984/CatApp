@@ -55,7 +55,7 @@ extension CatListViewController: CatsConfig {
   }
   
   func pushNavigation(data: CatCellModel) {
-    var detailController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailVC") as DetailViewController
+    let detailController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailVC") as DetailViewController
     let viewModel = DetailViewModel(detailCat: data)
     detailController.viewModel = viewModel
     navigationController?.pushViewController(detailController, animated: true)

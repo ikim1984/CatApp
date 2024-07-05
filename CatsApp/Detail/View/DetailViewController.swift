@@ -28,7 +28,7 @@ final class DetailViewController: UIViewController {
   
   private func loadData() {
     if let data = viewModel {
-      catImage.loadImage(image: data.imagePath, id: data.imagePath)
+      catImage.downloadImage(path: data.imagePath)
       collectionVIew.sourceList = data.tagCat
     }
   }
