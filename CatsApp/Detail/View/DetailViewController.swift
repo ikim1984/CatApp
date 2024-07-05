@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Components
 
 final class DetailViewController: UIViewController {
   // Mark:- Outlets

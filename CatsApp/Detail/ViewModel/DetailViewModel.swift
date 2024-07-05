@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Components
 
 final class DetailViewModel: NSObject {
   var detailCat: CatCellModel

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Components
 
 final class CatListViewController: UIViewController {
   //MARK:- Outlets
