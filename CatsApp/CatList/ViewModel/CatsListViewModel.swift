@@ -19,7 +19,8 @@ final class CatsListViewModel: NSObject {
     api.service(method: Httpmethod.GET.rawValue, model: [CatsModel].self, endPoint: EndPoint.catList.path, parameters: parms) { response in
       switch response {
       case let .success(success):
-        completion(.success(success))
+        let response = success.filter { ($0.tags?.count ?? -1) > 2 }
+        completion(.success(response))
       case let .failure(failure):
         completion(.failure(failure))
       default:

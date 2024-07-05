@@ -14,14 +14,22 @@ final class CatListViewController: UIViewController {
  //MARK:- Variables
   private let viewModel = CatsListViewModel()
   
-  private let limit = 20
+  private let limit = 50
   private var skip = 0
   
   //MARK:- Livecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     catsCollectionView.collectionDelegate = self
+    navigationSetup()
     loadCats()
+  }
+  
+  //MARK:- Private functions
+  private func navigationSetup() {
+    navigationItem.title = "Best cats ever"
+    navigationItem.largeTitleDisplayMode = .always
+    navigationController?.navigationBar.prefersLargeTitles = true
   }
   
   //MARK:- Functions
@@ -39,13 +47,16 @@ final class CatListViewController: UIViewController {
   }
 }
 
+//MARK:- Delegates
 extension CatListViewController: CatsConfig {
   func checkLastId(isLast: Bool) {
     skip += limit
     loadCats()
   }
   
-  func onTapSelector(data: CatCellModel) {
-    print("********* TAP SELECTED ***********\n", data)
+  func pushNavigation(data: CatCellModel) {
+    let detailController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailVC") as DetailViewController
+    detailController.detailData = data
+    navigationController?.pushViewController(detailController, animated: true)
   }
 }
