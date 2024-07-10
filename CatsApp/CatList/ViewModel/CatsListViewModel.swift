@@ -10,9 +10,10 @@ import Networking
 
 protocol ViewModelProtocol {
   func fetchCats(limit: Int, skip: Int, completion: @escaping (Result<[CatsModel], Error>) -> Void)
+  func handleModelCell(response: [CatsModel]) -> [CatCellModel]
 }
 
-class CatsListViewModel: NSObject, ViewModelProtocol {
+final class CatsListViewModel: NSObject, ViewModelProtocol {
   private var apiService: ApiProtocol
   
   init(apiService: ApiProtocol) {
@@ -35,5 +36,10 @@ class CatsListViewModel: NSObject, ViewModelProtocol {
         return
       }
     }
+  }
+  
+  func handleModelCell(response: [CatsModel]) -> [CatCellModel] {
+    return response.map { CatCellModel(image: $0.id ?? "",
+                                       tag: $0.tags ?? []) }
   }
 }

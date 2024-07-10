@@ -7,7 +7,12 @@
 
 import Foundation
 
-final class DetailViewModel: NSObject {
+protocol detailViewModelProtocol {
+  var imagePath: String { get }
+  var tagCat: [String] { get }
+}
+
+final class DetailViewModel: NSObject, detailViewModelProtocol {
   var detailCat: CatCellModel
   
   init(detailCat: CatCellModel) {

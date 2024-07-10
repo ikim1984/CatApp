@@ -45,11 +45,11 @@ final class CatListViewController: UIViewController {
   
   //MARK:- Functions
   func loadCats() {
-    viewModel.fetchCats(limit: 20, skip: skip) { result in
+    viewModel.fetchCats(limit: 20, skip: skip) { [weak self] result in
+      guard let self = self else { return }
       switch result {
       case let .success(response):
-        let requestModel: [CatCellModel] = response.compactMap { CatCellModel(image: $0.id ?? "", 
-                                                                              tag: $0.tags ?? []) }
+        let requestModel: [CatCellModel] = self.viewModel.handleModelCell(response: response)
         self.catsCollectionView.updateCollection(dataList: requestModel)
       case let .failure(error):
         print(error.localizedDescription)
@@ -60,9 +60,12 @@ final class CatListViewController: UIViewController {
 
 //MARK:- Delegates
 extension CatListViewController: CatsConfig {
+  // MARK:- Delegate check if there is more data to load
   func checkLastId(isLast: Bool) {
-    skip += limit
-    loadCats()
+    if isLast {
+      skip += limit
+      loadCats()
+    }
   }
   
   func pushNavigation(data: CatCellModel) {
