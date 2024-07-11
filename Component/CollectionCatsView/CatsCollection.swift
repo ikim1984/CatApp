@@ -55,7 +55,7 @@ extension CatsCollection: UICollectionViewDataSource {
     let catModel = sourceList[indexPath.row]
     cell.configCell(data: catModel)
 
-    if catModel.image  == sourceList.last?.image {
+    if catModel.image == sourceList.last?.image {
       collectionDelegate?.checkLastId(isLast: true)
     }
     return cell

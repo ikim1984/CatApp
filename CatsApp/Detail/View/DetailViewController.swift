@@ -18,9 +18,9 @@ final class DetailViewController: UIViewController {
   }
   @IBOutlet weak var collectionVIew: CollectionTagsView!
   
-  var viewModel: DetailViewModel
+  var viewModel: detailViewModelProtocol
   
-  init(viewModel: DetailViewModel) {
+  init(viewModel: detailViewModelProtocol) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
