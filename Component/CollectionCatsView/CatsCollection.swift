@@ -53,8 +53,9 @@ extension CatsCollection: UICollectionViewDataSource {
     }
     // Configure the cell
     let catModel = sourceList[indexPath.row]
+    cell.accessibilityIdentifier = "itemCat_\(catModel.image)"
+    cell.catImage.accessibilityIdentifier = "Cat\(catModel.tag.joined(separator: ","))"
     cell.configCell(data: catModel)
-
     if catModel.image == sourceList.last?.image {
       collectionDelegate?.checkLastId(isLast: true)
     }
