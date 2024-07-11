@@ -14,13 +14,21 @@ final class DetailTest: XCTestCase {
   override func setUpWithError() throws {
     // Put setup code here. This method is called before the invocation of each test method in the class.
     let mockViewmodel = detailViewModelTest()
-    detailControllerTest = DetailViewController(viewModel: mockViewmodel)
+    let detailController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailVC") as DetailViewController
+    let viewModel = mockViewmodel
+    detailController.loadView()
+    detailController.viewModel = viewModel
+    detailControllerTest = detailController
   }
   
   override func tearDownWithError() throws {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     
     detailControllerTest = nil
+  }
+  
+  func testViewDidLoad() {
+    XCTAssertNotNil(detailControllerTest.viewDidLoad(), "The life cicle should load all functions accoording to didload")
   }
   
   func testViewmodel() {

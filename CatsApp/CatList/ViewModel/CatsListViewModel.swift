@@ -28,7 +28,7 @@ final class CatsListViewModel: NSObject, ViewModelProtocol {
     apiService.service(method: Httpmethod.GET.rawValue, model: [CatsModel].self, endPoint: EndPoint.catList.path, parameters: parms) { response in
       switch response {
       case let .success(success):
-        let response = success.filter { ($0.tags?.count ?? -1) > 2 }
+        let response = success.filter { $0.tags.count > 2 }
         completion(.success(response))
       case let .failure(failure):
         completion(.failure(failure))
@@ -39,7 +39,7 @@ final class CatsListViewModel: NSObject, ViewModelProtocol {
   }
   
   func handleModelCell(response: [CatsModel]) -> [CatCellModel] {
-    return response.map { CatCellModel(image: $0.id ?? "",
-                                       tag: $0.tags ?? []) }
+    return response.map { CatCellModel(image: $0.id,
+                                       tag: $0.tags) }
   }
 }

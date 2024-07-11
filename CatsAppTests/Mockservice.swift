@@ -93,20 +93,19 @@ final class viewmodelTest: ViewModelProtocol {
   }
   
   func handleModelCell(response: [CatsModel]) -> [CatCellModel] {
-    return mockData.compactMap { CatCellModel(image: $0.id!, tag: $0.tags!) }
+    return mockData.compactMap { CatCellModel(image: $0.id, tag: $0.tags) }
   }
 }
 
 final class detailViewModelTest: detailViewModelProtocol {
-//  let mockModel = DetailViewModel(detailCat: CatCellModel(image: "P7XxICTz4kfqrwB0", tag: ["funny", "hehe"]))
-  let mockModel = CatCellModel(image: "P7XxICTz4kfqrwB0", tag: ["funny", "hehe"])
+  let dataModel = DetailViewModel(detailCat: CatCellModel(image: "P7XxICTz4kfqrwB0", tag: ["funny", "hehe"]))
   
   var imagePath: String {
-    mockModel.image
+    dataModel.imagePath
   }
   
   var tagCat: [String] {
-    mockModel.tag
+    dataModel.tagCat
   }
 
 }

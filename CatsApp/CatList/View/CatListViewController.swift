@@ -10,7 +10,11 @@ import Networking
 
 final class CatListViewController: UIViewController {
   //MARK:- Outlets
-  @IBOutlet weak var catsCollectionView: CatsCollection!
+  @IBOutlet weak var catsCollectionView: CatsCollection! {
+    didSet {
+      catsCollectionView.accessibilityIdentifier = "CatCollection"
+    }
+  }
  //MARK:- Variables
   let viewModel: ViewModelProtocol
   
@@ -38,6 +42,7 @@ final class CatListViewController: UIViewController {
   
   //MARK:- Private functions
   private func navigationSetup() {
+    navigationItem.customizationIdentifier = "homeTitle"
     navigationItem.title = "Best cats ever"
     navigationItem.largeTitleDisplayMode = .always
     navigationController?.navigationBar.prefersLargeTitles = true
@@ -69,9 +74,19 @@ extension CatListViewController: CatsConfig {
   }
   
   func pushNavigation(data: CatCellModel) {
-    let detailController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailVC") as DetailViewController
     let viewModel = DetailViewModel(detailCat: data)
-    detailController.viewModel = viewModel
-    navigationController?.pushViewController(detailController, animated: true)
+    
+    guard let controller = storyboard?.instantiateViewController(
+         identifier: "DetailVC",
+         creator: { coder in
+           DetailViewController(coder: coder)
+         }
+     ) else {
+      return
+     }
+    
+    controller.viewModel = viewModel
+    
+    navigationController?.pushViewController(controller, animated: true)
   }
 }

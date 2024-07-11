@@ -9,14 +9,11 @@ import Foundation
 
 enum EndPoint {
   case catList
-  case cat(id: String)
   
   var path: String {
     switch self {
     case .catList:
       return "/api/cats"
-    case .cat(let id):
-      return "/cat/\(id)"
     }
   }
 }
