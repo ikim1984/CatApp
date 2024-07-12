@@ -9,12 +9,24 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public struct ApiError : Swift.Codable {
+  public let code: Swift.Int
+  public let message: Swift.String
+  public init(code: Swift.Int, message: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct NetworkError : Swift.Error {
+  public let code: Swift.Int
+  public let message: Swift.String
+  public init(code: Swift.Int, message: Swift.String)
+}
 public protocol ApiProtocol {
-  func service<T>(method: Swift.String, model: T.Type, endPoint: Swift.String, parameters: [Swift.String : Any], completion: @escaping (Swift.Result<T, any Swift.Error>?) -> Swift.Void) where T : Swift.Decodable
+  func service<T>(method: Swift.String, model: T.Type, endPoint: Swift.String, parameters: [Swift.String : Any], completion: @escaping (Swift.Result<T, Networking.NetworkError>?) -> Swift.Void) where T : Swift.Decodable
 }
 public class ApiService : Networking.ApiProtocol {
   public init()
-  public func service<T>(method: Swift.String, model: T.Type, endPoint: Swift.String, parameters: [Swift.String : Any], completion: @escaping (Swift.Result<T, any Swift.Error>?) -> Swift.Void) where T : Swift.Decodable
+  public func service<T>(method: Swift.String, model: T.Type, endPoint: Swift.String, parameters: [Swift.String : Any], completion: @escaping (Swift.Result<T, Networking.NetworkError>?) -> Swift.Void) where T : Swift.Decodable
   public func downloadImageCache(_ urlString: Swift.String, nameKey: Swift.String, completion: @escaping (_ image: UIKit.UIImage) -> Swift.Void)
   @objc deinit
 }

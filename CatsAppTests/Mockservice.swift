@@ -19,11 +19,24 @@ struct MockData {
   ]
 }
 
+enum ServiceType {
+  case normal
+  case error
+}
+
 final class MockService: ApiProtocol {
-  func service<T>(method: String, model: T.Type, endPoint: String, parameters: [String : Any], completion: @escaping (Result<T, any Error>?) -> Void) where T : Decodable {
-    
+  
+  private let type: ServiceType
+  
+  init(type: ServiceType) {
+    self.type = type
+  }
+  
+  func service<T>(method: String, model: T.Type, endPoint: String, parameters: [String : Any], completion: @escaping (Result<T, NetworkError>?) -> Void) where T : Decodable {
+    let urlError = URL(string: "https://test.com.test")
     let url = URL(string: "https://cataas.com/api/cats?limit=5&skip=0")
-    var request = URLRequest(url: url!)
+    let customUrl = type == .normal ? url : urlError
+    var request = URLRequest(url: customUrl!)
     request.httpMethod = "get"
     
     URLSession.shared.dataTask(with: request) { data, response, error in
@@ -62,6 +75,43 @@ final class MockService: ApiProtocol {
                 }
             ]
             """
+      
+      let responseErrorTest =
+            """
+            {
+              "message": "Test Error",
+              "code": 403
+            }
+            """
+      let dataTest = self.type == .normal ? responseTest.data(using: .utf8) : responseErrorTest.data(using: .utf8)
+      
+      if let data = dataTest {
+        do {
+          let response = try JSONDecoder().decode(T.self, from: data)
+          completion(.success(response))
+        } catch let error as NSError {
+          let customError = NetworkError(code: 0, message: "Test Messsage")
+          completion(.failure(customError))
+        }
+      }
+    }.resume()
+  }
+}
+
+final class MockserviceError: ApiProtocol {
+  func service<T>(method: String, model: T.Type, endPoint: String, parameters: [String : Any], completion: @escaping (Result<T, NetworkError>?) -> Void) where T : Decodable {
+    let url = URL(string: "https://cataas.com/api/cats?limit=5&skip=0")
+    var request = URLRequest(url: url!)
+    request.httpMethod = "get"
+    
+    URLSession.shared.dataTask(with: request) { data, response, error in
+      let responseTest =
+            """
+            {
+              "message": "Test Error",
+              "code": 403
+            }
+            """
       let dataTest = responseTest.data(using: .utf8)
       
       if let data = dataTest {
@@ -69,7 +119,8 @@ final class MockService: ApiProtocol {
           let response = try JSONDecoder().decode(T.self, from: data)
           completion(.success(response))
         } catch let error as NSError {
-          completion(.failure(error))
+          let customError = NetworkError(code: 0, message: "Test Error")
+          completion(.failure(customError))
         }
       }
     }.resume()
@@ -78,14 +129,20 @@ final class MockService: ApiProtocol {
 
 final class viewmodelTest: ViewModelProtocol {
   let mockData = MockData().mockModel
-  let mockService = MockService()
-  func fetchCats(limit: Int, skip: Int, completion: @escaping (Result<[CatsModel], Error>) -> Void) {
+
+  let mockService: MockService
+  
+  init(mockService: MockService) {
+    self.mockService = mockService
+  }
+  
+  func fetchCats(limit: Int, skip: Int, completion: @escaping (Result<[CatsModel], ServiceError>) -> Void) {
     mockService.service(method: "test", model: [CatsModel].self, endPoint: "test", parameters: [:]) { response in
       switch response {
       case .success(let success):
         completion(.success(success))
       case .failure(let failure):
-        completion(.failure(failure))
+        completion(.failure(.serverError("Test Error")))
       default:
         return
       }

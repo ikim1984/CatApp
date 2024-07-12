@@ -15,9 +15,9 @@ final class CatListViewController: UIViewController {
       catsCollectionView.accessibilityIdentifier = "CatCollection"
     }
   }
- //MARK:- Variables
+  //MARK:- Variables
   let viewModel: ViewModelProtocol
-  
+  private var stopFetchingLimit = 1695
   let limit = 50
   var skip = 0
   
@@ -49,6 +49,12 @@ final class CatListViewController: UIViewController {
   }
   
   //MARK:- Functions
+  func customAlert(message: String) {
+    let alert = UIAlertController.alert(message: message)
+    alert.view.accessibilityIdentifier = "CatAlert"
+    present(alert, animated: true)
+  }
+  
   func loadCats() {
     viewModel.fetchCats(limit: 20, skip: skip) { [weak self] result in
       guard let self = self else { return }
@@ -56,8 +62,10 @@ final class CatListViewController: UIViewController {
       case let .success(response):
         let requestModel: [CatCellModel] = self.viewModel.handleModelCell(response: response)
         self.catsCollectionView.updateCollection(dataList: requestModel)
-      case let .failure(error):
-        print(error.localizedDescription)
+      case let .failure(.serverError(message)):
+        DispatchQueue.main.async {
+          self.customAlert(message: message)
+        }
       }
     }
   }
@@ -67,7 +75,7 @@ final class CatListViewController: UIViewController {
 extension CatListViewController: CatsConfig {
   // MARK:- Delegate check if there is more data to load
   func checkLastId(isLast: Bool) {
-    if isLast {
+    if isLast && skip <= stopFetchingLimit {
       skip += limit
       loadCats()
     }
@@ -77,13 +85,13 @@ extension CatListViewController: CatsConfig {
     let viewModel = DetailViewModel(detailCat: data)
     
     guard let controller = storyboard?.instantiateViewController(
-         identifier: "DetailVC",
-         creator: { coder in
-           DetailViewController(coder: coder)
-         }
-     ) else {
+      identifier: "DetailVC",
+      creator: { coder in
+        DetailViewController(coder: coder)
+      }
+    ) else {
       return
-     }
+    }
     
     controller.viewModel = viewModel
     

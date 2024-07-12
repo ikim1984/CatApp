@@ -19,3 +19,12 @@ extension UIImageView {
     }
   }
 }
+
+extension UIAlertController {
+  static func alert(message: String, title: String = "") -> UIAlertController {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let submitAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alert.addAction(submitAction)
+    return alert
+  }
+}

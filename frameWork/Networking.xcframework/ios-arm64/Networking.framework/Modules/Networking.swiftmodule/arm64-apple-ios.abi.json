@@ -15,6 +15,369 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "ApiError",
+        "printedName": "ApiError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Networking8ApiErrorV4codeSivp",
+            "mangledName": "$s10Networking8ApiErrorV4codeSivp",
+            "moduleName": "Networking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Networking8ApiErrorV4codeSivg",
+                "mangledName": "$s10Networking8ApiErrorV4codeSivg",
+                "moduleName": "Networking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Networking8ApiErrorV7messageSSvp",
+            "mangledName": "$s10Networking8ApiErrorV7messageSSvp",
+            "moduleName": "Networking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Networking8ApiErrorV7messageSSvg",
+                "mangledName": "$s10Networking8ApiErrorV7messageSSvg",
+                "moduleName": "Networking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(code:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ApiError",
+                "printedName": "Networking.ApiError",
+                "usr": "s:10Networking8ApiErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10Networking8ApiErrorV4code7messageACSi_SStcfc",
+            "mangledName": "$s10Networking8ApiErrorV4code7messageACSi_SStcfc",
+            "moduleName": "Networking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ApiError",
+                "printedName": "Networking.ApiError",
+                "usr": "s:10Networking8ApiErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10Networking8ApiErrorV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10Networking8ApiErrorV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Networking",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Networking8ApiErrorV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10Networking8ApiErrorV6encode2toys7Encoder_p_tKF",
+            "moduleName": "Networking",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Networking8ApiErrorV",
+        "mangledName": "$s10Networking8ApiErrorV",
+        "moduleName": "Networking",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkError",
+        "printedName": "NetworkError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Networking12NetworkErrorV4codeSivp",
+            "mangledName": "$s10Networking12NetworkErrorV4codeSivp",
+            "moduleName": "Networking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Networking12NetworkErrorV4codeSivg",
+                "mangledName": "$s10Networking12NetworkErrorV4codeSivg",
+                "moduleName": "Networking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Networking12NetworkErrorV7messageSSvp",
+            "mangledName": "$s10Networking12NetworkErrorV7messageSSvp",
+            "moduleName": "Networking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Networking12NetworkErrorV7messageSSvg",
+                "mangledName": "$s10Networking12NetworkErrorV7messageSSvg",
+                "moduleName": "Networking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(code:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkError",
+                "printedName": "Networking.NetworkError",
+                "usr": "s:10Networking12NetworkErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10Networking12NetworkErrorV4code7messageACSi_SStcfc",
+            "mangledName": "$s10Networking12NetworkErrorV4code7messageACSi_SStcfc",
+            "moduleName": "Networking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Networking12NetworkErrorV",
+        "mangledName": "$s10Networking12NetworkErrorV",
+        "moduleName": "Networking",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Networking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -116,7 +479,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<τ_1_0, any Swift.Error>?) -> ()",
+                "printedName": "(Swift.Result<τ_1_0, Networking.NetworkError>?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -126,12 +489,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Result<τ_1_0, any Swift.Error>?",
+                    "printedName": "Swift.Result<τ_1_0, Networking.NetworkError>?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<τ_1_0, any Swift.Error>",
+                        "printedName": "Swift.Result<τ_1_0, Networking.NetworkError>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -140,9 +503,9 @@
                           },
                           {
                             "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "any Swift.Error",
-                            "usr": "s:s5ErrorP"
+                            "name": "NetworkError",
+                            "printedName": "Networking.NetworkError",
+                            "usr": "s:10Networking12NetworkErrorV"
                           }
                         ],
                         "usr": "s:s6ResultO"
@@ -154,8 +517,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10Networking11ApiProtocolP7service6method5model8endPoint10parameters10completionySS_qd__mSSSDySSypGys6ResultOyqd__s5Error_pGSgctSeRd__lF",
-            "mangledName": "$s10Networking11ApiProtocolP7service6method5model8endPoint10parameters10completionySS_qd__mSSSDySSypGys6ResultOyqd__s5Error_pGSgctSeRd__lF",
+            "usr": "s:10Networking11ApiProtocolP7service6method5model8endPoint10parameters10completionySS_qd__mSSSDySSypGys6ResultOyqd__AA12NetworkErrorVGSgctSeRd__lF",
+            "mangledName": "$s10Networking11ApiProtocolP7service6method5model8endPoint10parameters10completionySS_qd__mSSSDySSypGys6ResultOyqd__AA12NetworkErrorVGSgctSeRd__lF",
             "moduleName": "Networking",
             "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Networking.ApiProtocol, τ_1_0 : Swift.Decodable>",
             "sugared_genericSig": "<Self, T where Self : Networking.ApiProtocol, T : Swift.Decodable>",
@@ -254,7 +617,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<τ_0_0, any Swift.Error>?) -> ()",
+                "printedName": "(Swift.Result<τ_0_0, Networking.NetworkError>?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -264,12 +627,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Result<τ_0_0, any Swift.Error>?",
+                    "printedName": "Swift.Result<τ_0_0, Networking.NetworkError>?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<τ_0_0, any Swift.Error>",
+                        "printedName": "Swift.Result<τ_0_0, Networking.NetworkError>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -278,9 +641,9 @@
                           },
                           {
                             "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "any Swift.Error",
-                            "usr": "s:s5ErrorP"
+                            "name": "NetworkError",
+                            "printedName": "Networking.NetworkError",
+                            "usr": "s:10Networking12NetworkErrorV"
                           }
                         ],
                         "usr": "s:s6ResultO"
@@ -292,8 +655,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10Networking10ApiServiceC7service6method5model8endPoint10parameters10completionySS_xmSSSDySSypGys6ResultOyxs5Error_pGSgctSeRzlF",
-            "mangledName": "$s10Networking10ApiServiceC7service6method5model8endPoint10parameters10completionySS_xmSSSDySSypGys6ResultOyxs5Error_pGSgctSeRzlF",
+            "usr": "s:10Networking10ApiServiceC7service6method5model8endPoint10parameters10completionySS_xmSSSDySSypGys6ResultOyxAA12NetworkErrorVGSgctSeRzlF",
+            "mangledName": "$s10Networking10ApiServiceC7service6method5model8endPoint10parameters10completionySS_xmSSSDySSypGys6ResultOyxAA12NetworkErrorVGSgctSeRzlF",
             "moduleName": "Networking",
             "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
             "sugared_genericSig": "<T where T : Swift.Decodable>",
@@ -622,6 +985,20 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Model\/ApiError.swift",
+      "kind": "StringLiteral",
+      "offset": 345,
+      "length": 54,
+      "value": "\"Please try again later, service is not available now\""
+    },
+    {
+      "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Model\/ApiError.swift",
+      "kind": "StringLiteral",
+      "offset": 345,
+      "length": 54,
+      "value": "\"Please try again later, service is not available now\""
+    },
+    {
       "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Service\/PathService.swift",
       "kind": "StringLiteral",
       "offset": 159,
@@ -638,28 +1015,28 @@
     {
       "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Utils\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 330,
+      "offset": 140,
       "length": 5,
       "value": "\"get\""
     },
     {
       "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Utils\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 350,
+      "offset": 160,
       "length": 6,
       "value": "\"post\""
     },
     {
       "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Utils\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 330,
+      "offset": 140,
       "length": 5,
       "value": "\"get\""
     },
     {
       "filePath": "\/Users\/miguelsaravia\/developer\/dev-ios\/CatsFrameWork\/Service\/Networking\/Networking\/Networking\/Utils\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 350,
+      "offset": 160,
       "length": 6,
       "value": "\"post\""
     }

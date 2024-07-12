@@ -9,18 +9,19 @@ import UIKit
 import Networking
 
 protocol ViewModelProtocol {
-  func fetchCats(limit: Int, skip: Int, completion: @escaping (Result<[CatsModel], Error>) -> Void)
+  func fetchCats(limit: Int, skip: Int, completion: @escaping (Result<[CatsModel], ServiceError>) -> Void)
   func handleModelCell(response: [CatsModel]) -> [CatCellModel]
 }
 
 final class CatsListViewModel: NSObject, ViewModelProtocol {
   private var apiService: ApiProtocol
+  var apiCount = 0
   
   init(apiService: ApiProtocol) {
     self.apiService = apiService
   }
   
-  func fetchCats(limit: Int, skip: Int, completion: @escaping (Result<[CatsModel], Error>) -> Void) {
+  func fetchCats(limit: Int, skip: Int, completion: @escaping (Result<[CatsModel], ServiceError>) -> Void) {
     let parms: [String: String] = [
       "limit":"\(limit)",
       "skip":"\(skip)"
@@ -30,8 +31,9 @@ final class CatsListViewModel: NSObject, ViewModelProtocol {
       case let .success(success):
         let response = success.filter { $0.tags.count > 2 }
         completion(.success(response))
-      case let .failure(failure):
-        completion(.failure(failure))
+      case let .failure(error):
+        let currentError = error as NetworkError
+        completion(.failure(.serverError(currentError.message)))
       default:
         return
       }

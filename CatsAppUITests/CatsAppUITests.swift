@@ -24,20 +24,8 @@ final class CatsAppUITests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
   
-  func testExample() throws {
-    // UI tests must launch the application that they test.
-    app.launch()
-    
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-  }
-  
-  func testLaunchPerformance() throws {
-    if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-      // This measures how long it takes to launch your application.
-      measure(metrics: [XCTApplicationLaunchMetric()]) {
-        XCUIApplication().launch()
-      }
-    }
+  override func setUp() async throws {
+    try await super.setUp()
   }
   
   func testCollectionview() {
@@ -53,9 +41,14 @@ final class CatsAppUITests: XCTestCase {
     app.launch()
     
     let collection = app.collectionViews
-    collection.element.swipeDown(velocity: .slow)
+    collection.element.swipeUp(velocity: .slow)
     
     XCTAssertTrue(collection.element.waitForExistence(timeout: 0.5))
     XCTAssertTrue(collection.cells.element.waitForExistence(timeout: 0.5))
+  }
+  
+  func testNavigationItem() {
+    app.launch()
+    XCTAssertEqual(app.navigationBars.element.identifier, "Best cats ever")
   }
 }
