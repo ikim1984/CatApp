@@ -9,13 +9,13 @@ import Foundation
 
 // MARK: - CatModel
 struct CatsModel: Codable {
-    let id: String
-    let mimetype: String
-    let size: Int
-    let tags: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case id = "_id"
-        case mimetype, size, tags
-    }
+  let id: String
+  let mimetype: String
+  let size: Int
+  let tags: [String]
+  
+  enum CodingKeys: String, CodingKey {
+    case id = "_id"
+    case mimetype, size, tags
+  }
 }
