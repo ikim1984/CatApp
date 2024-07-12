@@ -20,5 +20,4 @@ enum EndPoint {
 
 enum Httpmethod: String {
   case GET = "get"
-  case POST = "post"
 }

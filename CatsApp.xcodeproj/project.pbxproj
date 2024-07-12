@@ -25,10 +25,10 @@
 		8CCF83212C3854F600EDBA72 /* CollectionTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF83162C3854F600EDBA72 /* CollectionTagsView.swift */; };
 		8CCF83222C3854F600EDBA72 /* CatCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF83182C3854F600EDBA72 /* CatCellModel.swift */; };
 		8CCF832B2C386E8400EDBA72 /* Mockservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF832A2C386E8400EDBA72 /* Mockservice.swift */; };
-		8CCF83302C3893AC00EDBA72 /* Networking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCF832F2C3893AC00EDBA72 /* Networking.xcframework */; };
-		8CCF83312C3893AC00EDBA72 /* Networking.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCF832F2C3893AC00EDBA72 /* Networking.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CCF83342C38A4FA00EDBA72 /* DetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF83332C38A4FA00EDBA72 /* DetailTest.swift */; };
-		8CCFD4532C40A7DD00A9DB7A /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFD4522C40A7DC00A9DB7A /* HandleError.swift */; };
+		8CF00A0E2C40C62200451141 /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF00A0D2C40C62200451141 /* HandleError.swift */; };
+		8CF00A102C40D4E800451141 /* Networking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF00A0F2C40D4E800451141 /* Networking.xcframework */; };
+		8CF00A112C40D4E800451141 /* Networking.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF00A0F2C40D4E800451141 /* Networking.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CF61FC42C3311B200E7AB70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF61FC32C3311B200E7AB70 /* AppDelegate.swift */; };
 		8CF61FC62C3311B200E7AB70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF61FC52C3311B200E7AB70 /* SceneDelegate.swift */; };
 		8CF61FCB2C3311B200E7AB70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8CF61FCA2C3311B200E7AB70 /* Base */; };
@@ -57,13 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8CCF83322C3893AC00EDBA72 /* Embed Frameworks */ = {
+		8CF00A122C40D4E800451141 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8CCF83312C3893AC00EDBA72 /* Networking.xcframework in Embed Frameworks */,
+				8CF00A112C40D4E800451141 /* Networking.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,9 +88,9 @@
 		8CCF83162C3854F600EDBA72 /* CollectionTagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTagsView.swift; sourceTree = "<group>"; };
 		8CCF83182C3854F600EDBA72 /* CatCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatCellModel.swift; sourceTree = "<group>"; };
 		8CCF832A2C386E8400EDBA72 /* Mockservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockservice.swift; sourceTree = "<group>"; };
-		8CCF832F2C3893AC00EDBA72 /* Networking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Networking.xcframework; path = frameWork/Networking.xcframework; sourceTree = "<group>"; };
 		8CCF83332C38A4FA00EDBA72 /* DetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTest.swift; sourceTree = "<group>"; };
-		8CCFD4522C40A7DC00A9DB7A /* HandleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleError.swift; sourceTree = "<group>"; };
+		8CF00A0D2C40C62200451141 /* HandleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleError.swift; sourceTree = "<group>"; };
+		8CF00A0F2C40D4E800451141 /* Networking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Networking.xcframework; path = frameWork/Networking.xcframework; sourceTree = "<group>"; };
 		8CF61FC02C3311B200E7AB70 /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF61FC32C3311B200E7AB70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF61FC52C3311B200E7AB70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CCF83302C3893AC00EDBA72 /* Networking.xcframework in Frameworks */,
+				8CF00A102C40D4E800451141 /* Networking.xcframework in Frameworks */,
 				8CCF82AE2C384E9300EDBA72 /* SDWebImage in Frameworks */,
 				8CCF82B02C384E9300EDBA72 /* SDWebImageMapKit in Frameworks */,
 			);
@@ -161,7 +161,7 @@
 		8C154FE02C34B8E300089F17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CCF832F2C3893AC00EDBA72 /* Networking.xcframework */,
+				8CF00A0F2C40D4E800451141 /* Networking.xcframework */,
 				8CCF82A32C3841C900EDBA72 /* SDWebImage.xcframework */,
 			);
 			name = Frameworks;
@@ -180,7 +180,7 @@
 			children = (
 				8CCF830A2C3854F600EDBA72 /* Extension.swift */,
 				8C25700C2C36276C00DDF578 /* EndPoint.swift */,
-				8CCFD4522C40A7DC00A9DB7A /* HandleError.swift */,
+				8CF00A0D2C40C62200451141 /* HandleError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,7 +341,7 @@
 				8CF61FBC2C3311B200E7AB70 /* Sources */,
 				8CF61FBD2C3311B200E7AB70 /* Frameworks */,
 				8CF61FBE2C3311B200E7AB70 /* Resources */,
-				8CCF83322C3893AC00EDBA72 /* Embed Frameworks */,
+				8CF00A122C40D4E800451141 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,7 +474,7 @@
 			files = (
 				8CCF831A2C3854F600EDBA72 /* Extension.swift in Sources */,
 				8C5896BE2C33388C00D9BA79 /* CatListViewController.swift in Sources */,
-				8CCFD4532C40A7DD00A9DB7A /* HandleError.swift in Sources */,
+				8CF00A0E2C40C62200451141 /* HandleError.swift in Sources */,
 				8CF61FC42C3311B200E7AB70 /* AppDelegate.swift in Sources */,
 				8C25700D2C36276C00DDF578 /* EndPoint.swift in Sources */,
 				8C10531E2C36F50D00735E88 /* CatsListViewModel.swift in Sources */,

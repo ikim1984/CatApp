@@ -13,7 +13,7 @@ final class CatsAppTests: XCTestCase {
   
   override func setUpWithError() throws {
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    let viewModelTest = viewmodelTest()
+    let viewModelTest = viewmodelTest(mockService: .init(type: .normal))
     catController = CatListViewController(viewModel: viewModelTest)
   }
   
@@ -47,4 +47,13 @@ final class CatsAppTests: XCTestCase {
     
     XCTAssertEqual(handleResponseTest.count, 5)
   }
+  
+  
+  func testHandleError() {
+    let viewModelTest = viewmodelTest(mockService: .init(type: .error))
+    let sup = CatListViewController(viewModel: viewModelTest)
+    
+    XCTAssertNotNil(sup.loadCats(), "Load Error service")
+  }
+  
 }

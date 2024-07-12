@@ -51,6 +51,7 @@ final class CatListViewController: UIViewController {
   //MARK:- Functions
   func customAlert(message: String) {
     let alert = UIAlertController.alert(message: message)
+    alert.view.accessibilityIdentifier = "CatAlert"
     present(alert, animated: true)
   }
   
